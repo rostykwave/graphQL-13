@@ -1,0 +1,20 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type B {
+  id: Int!
+  data: String!
+}
+
+type Query {
+  allB: [B!]!
+}
+
+type Mutation {
+  createB(createBInput: CreateBInput!): B!
+}
+
+input CreateBInput {
+  data: String!
+}
