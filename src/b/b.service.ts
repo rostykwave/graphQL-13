@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { B } from './b.model';
+import { B } from './b.entity';
 import { bDatabase } from './database/b-database';
 import { CreateBInput } from './dto/create-b-input.dto';
 
@@ -21,13 +21,13 @@ export class BService {
   }
 
   async findAll(): Promise<B[]> {
-    // const b = new B();
-    // b.id = 1;
-    // b.data = 'dataaa';
+    const b = new B();
+    b.id = 1;
+    b.data = 'dataaa';
 
-    return bDatabase;
+    // return bDatabase;
 
-    // return [b];
+    return [b];
   }
 
   async findOne(id: number): Promise<B> {

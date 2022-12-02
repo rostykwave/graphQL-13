@@ -1,3 +1,3 @@
-import { B } from '../b.model';
+import { B } from '../b.entity';
 
 export const bDatabase: B[] = [];

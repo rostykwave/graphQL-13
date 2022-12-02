@@ -5,6 +5,7 @@
 type B {
   id: Int!
   data: String!
+  type: String
 }
 
 type Query {

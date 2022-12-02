@@ -1,5 +1,5 @@
 import { Args, Int, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { B } from './b.model';
+import { B } from './b.entity';
 import { BService } from './b.service';
 import { CreateBInput } from './dto/create-b-input.dto';
 
@@ -7,16 +7,16 @@ import { CreateBInput } from './dto/create-b-input.dto';
 export class BResolver {
   constructor(private bService: BService) {}
 
-  getB(@Args('id',{ type:()=>Int}) id:number): Promise<B>{
-    return this.bService.findOne(id).
+  getB(@Args('id', { type: () => Int }) id: number): Promise<B> {
+    return this.bService.findOne(id);
   }
 
-  @Query((retuns) => [B])
+  @Query((returns) => [B])
   allB(): Promise<B[]> {
     return this.bService.findAll();
   }
 
-  @Mutation((retuns) => B)
+  @Mutation((returns) => B)
   createB(@Args('createBInput') createBInput: CreateBInput): Promise<B> {
     return this.bService.createB(createBInput);
   }
