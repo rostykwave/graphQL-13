@@ -7,6 +7,7 @@ import { CreateBInput } from './dto/create-b-input.dto';
 export class BResolver {
   constructor(private bService: BService) {}
 
+  @Query((returns) => B)
   getB(@Args('id', { type: () => Int }) id: number): Promise<B> {
     return this.bService.findOne(id);
   }

@@ -12,7 +12,7 @@ export class B {
   @Field()
   data: string;
 
-  @Column()
+  @Column({ nullable: true })
   @Field({ nullable: true })
   type?: string;
 }

@@ -9,6 +9,7 @@ type B {
 }
 
 type Query {
+  getB(id: Int!): B!
   allB: [B!]!
 }
 
@@ -18,4 +19,5 @@ type Mutation {
 
 input CreateBInput {
   data: String!
+  type: String
 }
