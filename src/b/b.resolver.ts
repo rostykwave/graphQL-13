@@ -1,7 +1,7 @@
 import { Args, Int, Mutation, Query, Resolver } from '@nestjs/graphql';
 import { B } from './b.entity';
 import { BService } from './b.service';
-import { CreateBInput } from './dto/create-b-input.dto';
+import { CreateBInput } from './dto/create-b-input';
 
 @Resolver((of) => B)
 export class BResolver {
